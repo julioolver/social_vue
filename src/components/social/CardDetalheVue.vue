@@ -1,7 +1,5 @@
 <template>
-  <card-conteudo-vue perfil="https://materializecss.com/images/yuna.jpg"
-  nome = "Julio Cesar" 
-  data = "09/07/2020">
+<span>
   <div class="card-image">
     <img src="https://materializecss.com/images/sample-1.jpg">
     <span class="card-title">Card Title</span>
@@ -11,20 +9,26 @@
     <p>I am a very simple card. I am good at containing small bits of information.
     I am convenient because I require little markup to use effectively.</p>
   </div>
-  </card-conteudo-vue>
+</span>
 </template>
 
 <script>
-import CardConteudoVue from '@/components/social/CardConteudoVue'
+import GridVue from '@/components/layouts/GridVue'
+
 export default {
-  name: 'Home',
+  name: 'CardConteudoVue',
+  props: [
+      'perfil',
+      'nome',
+      'data'
+  ],
   data () {
     return {
-      
+     
     }
   },
   components: {
-    CardConteudoVue,
+    GridVue
   }
 }
 </script>
