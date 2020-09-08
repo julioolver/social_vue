@@ -1,8 +1,8 @@
 <template>
 
-  <site-template>
-
+  <span>
     <publicar-conteudo-vue />
+    <h2>Login</h2>
     
     <card-conteudo-vue perfil="https://materializecss.com/images/yuna.jpg"
     nome = "Julio Cesar" 
@@ -12,25 +12,23 @@
       titulo="" 
       txt="Este é o texto da postagem, favor informar o que quiser."/>
     </card-conteudo-vue>
-  </site-template>
+  </span>
 
 </template>
 
 <script>
-import SiteTemplate from '@/templates/SiteTemplate'
 import CardConteudoVue from '@/components/social/CardConteudoVue'
 import CardDetalheVue from '@/components/social/CardDetalheVue'
 import PublicarConteudoVue from '@/components/social/PublicarConteudoVue'
 
 export default {
-  name: 'Home',
+  name: 'Login',
   data () {
     return {
       
     }
   },
   components: {
-    SiteTemplate,
     CardConteudoVue,
     CardDetalheVue,
     PublicarConteudoVue
