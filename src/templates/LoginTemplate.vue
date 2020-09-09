@@ -1,7 +1,7 @@
 <template>
   <span>
     <header>
-      <nav-bar logo="Social" url="#/" cor="green darken-1">
+      <nav-bar logo="Social" url="/" cor="green darken-1">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/login">Entrar</router-link></li>
       </nav-bar>
@@ -10,17 +10,13 @@
     <main>
       <div class="container">
         <div class="row">
-            <grid-vue tamanho="4">
+            <grid-vue tamanho="8">
               <card-menu-vue>
-                <slot name="menuesquerdo"/>
-              </card-menu-vue>
-              <card-menu-vue>
-                <h3>Teste</h3>
+                <slot name="menuesquerdo" />
               </card-menu-vue>
             </grid-vue>
-
-            <grid-vue tamanho="8">
-                <slot name="principal"/>
+            <grid-vue tamanho="4">
+                <slot name="principal" />
             </grid-vue>
         </div>
       </div>
@@ -44,7 +40,7 @@ import CardMenuVue from '@/components/layouts/CardMenuVue'
 
 
 export default {
-  name: 'SiteTemplate',
+  name: 'LoginTemplate',
   components: {
     NavBar,
     FooterVue,

@@ -1,17 +1,31 @@
 <template>
 
   <site-template>
+    <span slot="menuesquerdo">
+      <div class="row valign-wrapper">
+        <grid-vue tamanho="4">
+          <img src="https://materializecss.com/images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+        </grid-vue>
+        <grid-vue tamanho="8">
+          <span class="black-text">
+            <h5>Maria Silva</h5>
+            TAdd the "circle" class to it to make it appear circular.
+          </span>
+        </grid-vue>
+      </div>
+    </span>
 
-    <publicar-conteudo-vue />
-    
-    <card-conteudo-vue perfil="https://materializecss.com/images/yuna.jpg"
-    nome = "Julio Cesar" 
-    data = "09/07/2020">
-      <card-detalhe-vue 
-      img="https://materializecss.com/images/sample-1.jpg" 
-      titulo="" 
-      txt="Este é o texto da postagem, favor informar o que quiser."/>
-    </card-conteudo-vue>
+    <span slot="principal">
+      <publicar-conteudo-vue />
+      <card-conteudo-vue perfil="https://materializecss.com/images/yuna.jpg"
+      nome = "Julio Cesar" 
+      data = "09/07/2020">
+        <card-detalhe-vue 
+        img="https://materializecss.com/images/sample-1.jpg" 
+        titulo="" 
+        txt="Este é o texto da postagem, favor informar o que quiser."/>
+      </card-conteudo-vue>
+    </span>
   </site-template>
 
 </template>

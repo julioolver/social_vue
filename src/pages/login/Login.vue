@@ -1,22 +1,23 @@
 <template>
 
-  <span>
-    <publicar-conteudo-vue />
-    <h2>Login</h2>
+  <login-template>
+    <span slot="menuesquerdo">
+      <img src="https://cakeerp.com/wp-content/uploads/2019/10/capa-2-1080x675.png" class="responsive-img">
+    </span>
+    <span slot="principal">
+      <h2>Login</h2>
+
+      <input type="text" placeholder="E-mail" value="">
+      <input type="text" placeholder="Senha" value="">
+      <button type="button" class="btn">Entrar</button>
+    </span>
     
-    <card-conteudo-vue perfil="https://materializecss.com/images/yuna.jpg"
-    nome = "Julio Cesar" 
-    data = "09/07/2020">
-      <card-detalhe-vue 
-      img="https://materializecss.com/images/sample-1.jpg" 
-      titulo="" 
-      txt="Este é o texto da postagem, favor informar o que quiser."/>
-    </card-conteudo-vue>
-  </span>
+  </login-template>
 
 </template>
 
 <script>
+import LoginTemplate from '@/templates/LoginTemplate'
 import CardConteudoVue from '@/components/social/CardConteudoVue'
 import CardDetalheVue from '@/components/social/CardDetalheVue'
 import PublicarConteudoVue from '@/components/social/PublicarConteudoVue'
@@ -31,7 +32,8 @@ export default {
   components: {
     CardConteudoVue,
     CardDetalheVue,
-    PublicarConteudoVue
+    PublicarConteudoVue,
+    LoginTemplate
   }
 }
 </script>
