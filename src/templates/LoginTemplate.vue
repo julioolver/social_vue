@@ -2,8 +2,12 @@
   <span>
     <header>
       <nav-bar logo="Social" url="/" cor="green darken-1">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/login">Entrar</router-link></li>
+        <li v-if="!user"><router-link to="/login">Entrar</router-link></li>
+        <li v-if="!user"><router-link to="/cadastro">Cadastrar</router-link></li>
+        <li v-if="user"><router-link to="/perfil">{{ user.name }}</router-link></li>
+        <li v-if="user"><a v-on:click="sair()">Sair</a></li>
+
+
       </nav-bar>
     </header>
 
@@ -41,12 +45,32 @@ import CardMenuVue from '@/components/layouts/CardMenuVue'
 
 export default {
   name: 'LoginTemplate',
+  data() {
+    return {
+      user : false
+    }
+  },
   components: {
     NavBar,
     FooterVue,
     GridVue,
     CardMenuVue
-  }
+  },
+  created() {
+    console.log('Created');
+    let userAux = sessionStorage.getItem('user');
+    if(userAux){
+      //converte string para json = parse
+      this.user = JSON.parse(userAux);
+      this.$router.push('/');
+    }
+  },
+  methods: {
+    sair(){
+      sessionStorage.clear();
+      this.user = false
+    }
+  },
 }
 </script>
 

@@ -18,11 +18,11 @@
     <span slot="principal">
       <publicar-conteudo-vue />
       <card-conteudo-vue perfil="https://materializecss.com/images/yuna.jpg"
-      nome = "Julio Cesar" 
+      nome = "Julio Cesar"
       data = "09/07/2020">
-        <card-detalhe-vue 
-        img="https://materializecss.com/images/sample-1.jpg" 
-        titulo="" 
+        <card-detalhe-vue
+        img="https://materializecss.com/images/sample-1.jpg"
+        titulo=""
         txt="Este é o texto da postagem, favor informar o que quiser."/>
       </card-conteudo-vue>
     </span>
@@ -34,20 +34,22 @@
 import SiteTemplate from '@/templates/SiteTemplate'
 import CardConteudoVue from '@/components/social/CardConteudoVue'
 import CardDetalheVue from '@/components/social/CardDetalheVue'
+import GridVue from '@/components/layouts/GridVue'
 import PublicarConteudoVue from '@/components/social/PublicarConteudoVue'
 
 export default {
   name: 'Home',
   data () {
     return {
-      
+
     }
   },
   components: {
     SiteTemplate,
     CardConteudoVue,
     CardDetalheVue,
-    PublicarConteudoVue
+    PublicarConteudoVue,
+    GridVue
   }
 }
 </script>
